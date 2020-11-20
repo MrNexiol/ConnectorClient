@@ -1,12 +1,10 @@
 package tomasz.kopycinski.connectorclient.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -15,9 +13,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import tomasz.kopycinski.connectorclient.R;
 import tomasz.kopycinski.connectorclient.api.model.Contact;
-import tomasz.kopycinski.connectorclient.api.model.GISTResponse;
 import tomasz.kopycinski.connectorclient.api.service.GISTResponseService;
-import tomasz.kopycinski.connectorclient.ui.RecyclerViewAdapter;
 
 public class ContactDetailsActivity extends AppCompatActivity {
 

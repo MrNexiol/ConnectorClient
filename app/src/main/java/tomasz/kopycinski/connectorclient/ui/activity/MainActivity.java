@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
@@ -26,11 +30,18 @@ public class MainActivity extends AppCompatActivity {
     private List<Contact> contacts;
     private RecyclerView recyclerView;
     private RecyclerViewAdapter adapter;
+    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        fab = findViewById(R.id.floatingActionButton);
+        fab.setOnClickListener(v -> {
+            Intent intent = new Intent(this, NewContactActivity.class);
+            startActivity(intent);
+        });
 
         recyclerView = findViewById(R.id.main_recycler);
         adapter = new RecyclerViewAdapter(contacts, MainActivity.this);
